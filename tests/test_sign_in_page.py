@@ -15,12 +15,12 @@ class TestSignInPage(BaseTest):
         page = MainPage(self.driver)
         self.assertTrue(page.check_page_loaded())
 
-    # def test_search_item(self):
-    #     print("\n" + str(test_cases(1)))
-    #     page = MainPage(self.driver)
-    #     self.driver.save_screenshot('BeforeSearch.png')
-    #     search_result = page.search_item("iphone")
-    #     self.driver.save_screenshot('AfterSearch.png')
-    #     self.assertIn("iphone", search_result)
-
+    
+    def test_search_item(self):
+        print("\n" + str(test_cases(1)))
+        page = MainPage(self.driver)
+        self.driver.save_screenshot('BeforeSearch.png')
+        search_result = page.search_item("iphone")
+        self.driver.save_screenshot('AfterSearch.png')
+        self.assertIn("iphone", search_result)
    
